@@ -15,11 +15,13 @@ class Date {
         int year;
 
     public:
+        Date();
+        Date(int, int, int);
         void afficher();
         void saisir();
-        string Date::toString()
+        string toString();
 
-    int getDay() const;
+        int getDay() const;
         void setDay(int day);
         int getMonth() const;
         void setMonth(int month);

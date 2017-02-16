@@ -3,13 +3,28 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include "Date.hpp"
 
 using namespace std;
 
+Date::Date() {
+
+    this->day = 0;
+    this->month = 0;
+    this->year = 0;
+}
+
+Date::Date(int day, int month, int year) {
+
+    this->day = day;
+    this->month = month;
+    this->year = year;
+}
+
 void Date::afficher() {
 
-
+    cout << "Date: " << this->toString() << endl;
 }
 
 void Date::saisir() {
@@ -24,7 +39,9 @@ void Date::saisir() {
 
 string Date::toString() {
 
-    //return this->day + "/" + this->month + "/" + this->year;
+    std::ostringstream stringStream;
+    stringStream << this->day << "/" << this->month << "/" << this->year;
+    return stringStream.str();
 }
 
 int Date::getDay() const {
