@@ -3,7 +3,7 @@ project(CPlusPlus)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(TD2_EX1_FILES TD2/EX1/main.cpp TD2/EX1/compte.h TD2/EX1/compte.cpp TD3/Bibliotheque/main.cpp TD3/Bibliotheque/Ouvrage.cpp TD3/Bibliotheque/Ouvrage.h TD3/Bibliotheque/Bibliotheque.cpp TD3/Bibliotheque/Bibliotheque.h)
+set(TD2_EX1_FILES TD2/EX1/main.cpp TD2/EX1/compte.h TD2/EX1/compte.cpp TD3/Bibliotheque/main.cpp TD3/Bibliotheque/Ouvrage.cpp TD3/Bibliotheque/Ouvrage.h TD3/Bibliotheque/Bibliotheque.cpp TD3/Bibliotheque/Bibliotheque.h Test/TestUn/Produit.cpp Test/TestUn/Produit.h)
 add_executable(TD2_EX1 ${TD2_EX1_FILES})
 
 set(TD2_EX2_FILES TD2/EX2/main.cpp TD2/EX2/notes.h TD2/EX2/notes.cpp)
@@ -20,3 +20,6 @@ add_executable(TD3_Evenement ${TD3_Evenement_FILES})
 
 set(TD3_Bibliotheque_FILES TD3/Bibliotheque/main.cpp TD3/Bibliotheque/Ouvrage.cpp TD3/Bibliotheque/Ouvrage.h TD3/Bibliotheque/Bibliotheque.cpp TD3/Bibliotheque/Bibliotheque.h)
 add_executable(TD3_Bibliotheque ${TD3_Bibliotheque_FILES})
+
+set(Test_Un_FILES  Test/TestUn/main.cpp Test/TestUn/Produit.cpp Test/TestUn/Produit.h Test/TestUn/Panier.cpp Test/TestUn/Panier.h)
+add_executable(Test_Un ${Test_Un_FILES})
