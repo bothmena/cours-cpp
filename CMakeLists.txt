@@ -28,3 +28,6 @@ add_executable(TD4_Banque ${TD4_Banque_FILES})
 
 set(Test_Un_FILES  Test/TestUn/main.cpp Test/TestUn/Produit.cpp Test/TestUn/Produit.h Test/TestUn/Panier.cpp Test/TestUn/Panier.h)
 add_executable(Test_Un ${Test_Un_FILES})
+
+set(Test2_VB_FILES  Test/Test2_VB/main.cpp Test/Test2_VB/Coupable.cpp Test/Test2_VB/Coupable.h Test/Test2_VB/Terroriste.cpp Test/Test2_VB/Terroriste.h Test/Test2_VB/BaseCriminal.cpp Test/Test2_VB/BaseCriminal.h)
+add_executable(Test2_VB ${Test2_VB_FILES})
