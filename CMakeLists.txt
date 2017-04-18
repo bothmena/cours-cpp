@@ -26,6 +26,10 @@ set(TD4_Banque_FILES TD4/Banque/main.cpp TD4/Banque/Banque.cpp TD4/Banque/Banque
         TD4/Banque/CompteCourant.h TD4/Banque/CompteEpargne.cpp TD4/Banque/CompteEpargne.h)
 add_executable(TD4_Banque ${TD4_Banque_FILES})
 
+set(Other_Memory_Allocation_FILES Other/MemoryAllocation/main.cpp Other/MemoryAllocation/SomeObject.h
+        Other/MemoryAllocation/SomeObject.cpp)
+add_executable(Other_Memory_Allocation ${Other_Memory_Allocation_FILES})
+
 set(Test_Un_FILES  Test/TestUn/main.cpp Test/TestUn/Produit.cpp Test/TestUn/Produit.h Test/TestUn/Panier.cpp Test/TestUn/Panier.h)
 add_executable(Test_Un ${Test_Un_FILES})
 
