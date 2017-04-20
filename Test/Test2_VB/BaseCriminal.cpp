@@ -18,7 +18,7 @@ void BaseCriminal::ajouter(Coupable *coupable) {
 
     this->coupables[ coupable->getMatricule() ] = coupable;
 }
-
+g
 void BaseCriminal::supprimer(Coupable *coupable) {
 
     if (this->coupables.find( coupable->getMatricule() ) == this->coupables.end()) {

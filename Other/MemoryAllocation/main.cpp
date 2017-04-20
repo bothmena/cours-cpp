@@ -1,32 +1,33 @@
 #include <iostream>
-#include "SomeObject.h"
+#include "Object.h"
+#include "OverloadedObject.h"
 
 int main() {
 
-    SomeObject* object = new SomeObject();
+    Object* object = new Object();
 
     object->setNumber(5);
     std::cout << "Hello, object number: " << object->getNumber() << std::endl;
-    object->~SomeObject();
-    new (object) SomeObject();
+    /*object->~Object();
     std::cout << "Hello, object number: " << object->getNumber() << std::endl;
-
-/*    void* temp = malloc(sizeof(SomeObject));
-//    void *temp = operator new(sizeof(SomeObject)); //this also does the same thing as the previous line.
-    SomeObject* object = new(temp) SomeObject();
-
-    object->setNumber(10);
-    std::cout << "Hello, object number: " << object->getNumber() << std::endl;
-
+    new (object) Object();
+    std::cout << "Hello, object number: " << object->getNumber() << std::endl;*/
     delete object;
-//    object->~SomeObject();
-//    operator delete(static_cast<void *>(object));
-//    free(temp);
-
     std::cout << "Hello, object number: " << object->getNumber() << std::endl;
 
-//    object->~SomeObject();
-//    operator delete(static_cast<void *>(object));*/
+    std::cout << "--------------------------------" << std::endl;
+
+    OverloadedObject* overloadedObject = new OverloadedObject;
+
+    overloadedObject->setNumber(5);
+    std::cout << overloadedObject->getNumber() << std::endl;
+    /*overloadedObject->~OverloadedObject();
+    std::cout << overloadedObject->getNumber() << std::endl;
+    new (overloadedObject) OverloadedObject(  );
+    std::cout << "Hello, overloadedObject number: " <<
+                  overloadedObject->getNumber() << std::endl;*/
+    delete overloadedObject;
+    std::cout << overloadedObject->getNumber() << std::endl;
 
     return 0;
 }

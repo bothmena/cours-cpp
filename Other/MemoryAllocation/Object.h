@@ -7,14 +7,16 @@
 
 #include <iostream>
 
-class SomeObject {
+using namespace std;
+
+class Object {
 
 private:
     int number;
 
 public:
-    SomeObject();
-    virtual ~SomeObject();
+    /*Object();
+    virtual ~Object();*/
     int getNumber() const;
     void setNumber(int number);
 
