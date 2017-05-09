@@ -8,10 +8,6 @@ set(Other_Memory_Allocation_FILES Other/MemoryAllocation/main.cpp
         Other/MemoryAllocation/OverloadedObject.h Other/MemoryAllocation/OverloadedObject.cpp)
 add_executable(Other_Memory_Allocation ${Other_Memory_Allocation_FILES})
 
-set(Testing_FILES Other/CppTestTuto.cpp Other/catch.hpp
-        Other/MemoryAllocation/Object.h Other/MemoryAllocation/Object.cpp)
-add_executable(Testing ${Testing_FILES})
-
 set(ObjectTest_FILES Other/ObjectTest.cpp Other/catch.hpp
         Other/MemoryAllocation/Object.h Other/MemoryAllocation/Object.cpp)
 add_executable(ObjectTest ${ObjectTest_FILES})

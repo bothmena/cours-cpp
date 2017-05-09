@@ -2,27 +2,27 @@
 #include "catch.hpp"
 #include "MemoryAllocation/Object.h"
 
-//MAT = 'Memory Alocation Test'
+//MATO = 'Memory Alocation Test Object'
 
-TEST_CASE( "MAT, destroying object then replacing it", "[Normal]" ) {
+TEST_CASE( "MATO, destroying object then trying to use it!", "[Normal]" ) {
 
-    SomeObject* object = new SomeObject();
+    Object* object = new Object();
 
     object->setNumber(5);
     REQUIRE( object->getNumber() == 5 );
 
-    object->~SomeObject();
-    REQUIRE_FALSE( object->getNumber() >= 0 ); // Failed
+    delete object;
     REQUIRE_THROWS( object->getNumber() ); // Failed
 
-    new (object) SomeObject();
+    new (object) Object();
     REQUIRE_NOTHROW( object->getNumber() );
     REQUIRE( object->getNumber() == 0 );
 }
 
-TEST_CASE( "MAT, deleting object then replacing it", "[Normal]" ) {
+/*
+TEST_CASE( "MATO, destroying object then replacing it", "[Normal_1]" ) {
 
-    SomeObject* object = new SomeObject();
+    Object* object = new Object();
 
     object->setNumber(5);
     REQUIRE( object->getNumber() == 5 );
@@ -31,51 +31,52 @@ TEST_CASE( "MAT, deleting object then replacing it", "[Normal]" ) {
     REQUIRE_FALSE( object->getNumber() >= 0 ); // Failed
     REQUIRE_THROWS( object->getNumber() ); // Failed
 
-    new (object) SomeObject();
+    new (object) Object();
     REQUIRE_NOTHROW( object->getNumber() );
     REQUIRE( object->getNumber() == 0 );
 }
 
-TEST_CASE( "MAT, Allocation with malloc, not using free", "[Manually_1]" ) {
+TEST_CASE( "MATO, deleting object then replacing it", "[Normal_2]" ) {
 
-    void* temp = malloc(sizeof(SomeObject));
-    SomeObject* object = new(temp) SomeObject();
+    Object* object = new Object();
+
+    object->setNumber(5);
+    REQUIRE( object->getNumber() == 5 );
+
+    delete object;
+    REQUIRE_FALSE( object->getNumber() >= 0 ); // Failed
+    REQUIRE_THROWS( object->getNumber() ); // Failed
+
+    new (object) Object();
+    REQUIRE_NOTHROW( object->getNumber() );
+    REQUIRE( object->getNumber() == 0 );
+}
+
+TEST_CASE( "MATO, Allocation with malloc, not using free", "[Manually_1]" ) {
+
+    void* temp = malloc(sizeof(Object));
+    Object* object = new(temp) Object();
 
     object->setNumber(10);
     REQUIRE( object->getNumber() == 10 );
 
-    object->~SomeObject();
+    object->~Object();
     operator delete(static_cast<void *>(object));
 
 //    REQUIRE_FALSE( object->getNumber() >= 0 ); // Failed
     REQUIRE_THROWS( object->getNumber() ); // Failed
 }
 
-TEST_CASE( "MAT, Allocation with operator new, not using free", "[Manually_1]" ) {
+TEST_CASE( "MATO, Allocation with malloc, using free", "[Manually_2]" ) {
 
-    void *temp = operator new(sizeof(SomeObject));
-    SomeObject* object = new(temp) SomeObject();
-
-    object->setNumber(10);
-    REQUIRE( object->getNumber() == 10 );
-
-    object->~SomeObject();
-    operator delete(static_cast<void *>(object));
-
-    REQUIRE_FALSE( object->getNumber() >= 0 );
-    REQUIRE_THROWS( object->getNumber() );
-}
-
-TEST_CASE( "MAT, Allocation with malloc, using free", "[Manually_2]" ) {
-
-    void* temp = malloc(sizeof(SomeObject));
-    SomeObject* object = new(temp) SomeObject();
+    void* temp = malloc(sizeof(Object));
+    Object* object = new(temp) Object();
 
     object->setNumber(10);
     REQUIRE( object->getNumber() == 10 );
 
     try {
-        object->~SomeObject();
+        object->~Object();
         operator delete(static_cast<void *>(object));
         free(temp);
 
@@ -84,19 +85,4 @@ TEST_CASE( "MAT, Allocation with malloc, using free", "[Manually_2]" ) {
         std::cout << "... catch block." << std::endl;
     }
 }
-
-TEST_CASE( "MAT, Allocation with operator new, using free", "[Manually_2]" ) {
-
-    void *temp = operator new(sizeof(SomeObject));
-    SomeObject* object = new(temp) SomeObject();
-
-    object->setNumber(10);
-    REQUIRE( object->getNumber() == 10 );
-
-    object->~SomeObject();
-    operator delete(static_cast<void *>(object));
-    free(temp);
-
-    REQUIRE_FALSE( object->getNumber() >= 0 );
-    REQUIRE_THROWS( object->getNumber() );
-}
+*/
