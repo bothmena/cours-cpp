@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1493890924 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\cours.cpp
+	"Cours.h"
+	"Ressource.h"
+	<iostream>
+
+1493890924 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\cours.h
+	"Ressource.h"
+	<iostream>
+
+1493890924 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\ressource.h
+	<iostream>
+
+1493890924 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\exercice.cpp
+	"Exercice.h"
+	"Ressource.h"
+
+1493890924 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\exercice.h
+	"Ressource.h"
+	<iostream>
+
+1493892270 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\main.cpp
+	"Site.h"
+	<iostream>
+	<vector>
+	"Ressource.h"
+	"Cours.h"
+	"Exercice.h"
+	<typeinfo>
+
+1493892402 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\site.h
+	<iostream>
+	<vector>
+	"Ressource.h"
+	"Cours.h"
+	"Exercice.h"
+	<typeinfo>
+
+1493890924 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\ressource.cpp
+	<iostream>
+	"Ressource.h"
+
+1493892073 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionrevision\site.cpp
+	"Site.h"
+	<iostream>
+	<vector>
+	"Ressource.h"
+	"Cours.h"
+	"Exercice.h"
+	<typeinfo>
+

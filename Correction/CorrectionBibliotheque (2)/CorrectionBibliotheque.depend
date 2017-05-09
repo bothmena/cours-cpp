@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1492685824 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\abonne.cpp
+	"abonne.h"
+	"ouvrage.h"
+	<iostream>
+
+1492685824 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\abonne.h
+	<string>
+	"livre.h"
+	"video.h"
+	<typeinfo>
+
+1491558729 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\ouvrage.h
+	<string>
+
+1492599540 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\bibliotheque.cpp
+	"bibliotheque.h"
+	<iostream>
+
+1491807067 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\bibliotheque.h
+	"livre.h"
+	"video.h"
+	"abonne.h"
+	<vector>
+
+1491554586 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\livre.h
+	"ouvrage.h"
+
+1491554586 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\video.h
+	"ouvrage.h"
+	<string>
+
+1491556779 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\livre.cpp
+	"livre.h"
+	<iostream>
+
+1491808123 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\main.cpp
+	<iostream>
+	"bibliotheque.h"
+	"abonne.h"
+
+1491556777 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\video.cpp
+	"video.h"
+	<iostream>
+
+1491557628 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbibliotheque\ouvrage.cpp
+	"ouvrage.h"
+	<iostream>
+

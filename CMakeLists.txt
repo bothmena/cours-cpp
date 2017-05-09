@@ -61,3 +61,9 @@ set(Test2_VB_FILES  Test/Test2_VB/main.cpp Test/Test2_VB/Coupable.cpp
         Test/Test2_VB/Terroriste.h Test/Test2_VB/BaseCriminal.cpp
         Test/Test2_VB/BaseCriminal.h)
 add_executable(Test2_VB ${Test2_VB_FILES})
+
+set(Overload_FILES  Overload/main.cpp Overload/Point.cpp Overload/Point.h)
+add_executable(Overload ${Overload_FILES})
+
+set(Revision_FILES  Revision/main.cpp Revision/Ressource.cpp Revision/Ressource.h Revision/Cours.cpp Revision/Cours.h Revision/Exercice.cpp Revision/Exercice.h Revision/Site.cpp Revision/Site.h)
+add_executable(Revision ${Revision_FILES})

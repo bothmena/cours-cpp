@@ -15,8 +15,9 @@ private:
     int number;
 
 public:
-    /*Object();
-    virtual ~Object();*/
+    Object(int n){number=n; cout <<"ctr paramtre "<<number<<endl;};
+    Object(){cout <<"ctr "<<number<<endl;};
+    virtual ~Object(){cout<<"dstr"<<number<<endl;}
     int getNumber() const;
     void setNumber(int number);
 

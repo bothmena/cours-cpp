@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1493140852 source:c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbiblio2\abonne.cpp
+	"abonne.h"
+	"ouvrage.h"
+	<iostream>
+
+1493140845 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbiblio2\abonne.h
+	<string>
+	"livre.h"
+	"video.h"
+	<typeinfo>
+
+1491554586 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbiblio2\livre.h
+	"ouvrage.h"
+
+1491558729 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbiblio2\ouvrage.h
+	<string>
+
+1491554586 c:\users\esprit\downloads\td _cours3b\td _cours3b\correction_ex\td_3\ex1\correctionbiblio2\video.h
+	"ouvrage.h"
+	<string>
+
